@@ -1,23 +1,65 @@
 # IAM-1054 Evidence Guide
 
-This public evidence set is a sanitized subset of the original IAM-1054 screenshots. Tenant-specific identifiers and account details were removed before publication.
+This public evidence set documents the Conditional Access MFA pilot from initial safety controls through enforcement and session validation. Tenant-specific identifiers, account identifiers, object IDs, and sign-in event IDs were redacted before publication.
 
-## Published evidence
+## Core Conditional Access build and validation
 
-### 1. Sign-in Frequency configured to 1 hour
+### 1. Break-glass Global Administrator validated
+
+![Break-glass Global Administrator validated](01-break-glass-global-admin-validated.webp)
+
+Validated the emergency-access account and Global Administrator role before changing tenant-wide authentication controls.
+
+### 2. MFA pilot group scoped to Maya Brooks
+
+![CA MFA pilot group](02-ca-mfa-pilot-group-maya-brooks.webp)
+
+Confirmed Maya Brooks as the pilot identity in `GRP-CA-MFA-Pilot`, limiting the initial Conditional Access blast radius.
+
+### 3. CA policy staged in Report-only
+
+![CA policy report-only](03-ca-require-mfa-pilot-report-only.webp)
+
+Created `CA-Require-MFA-Pilot` with the MFA grant control and staged it in Report-only before enforcement.
+
+### 4. Report-only evaluation captured
+
+![Report-only evaluation](04-report-only-user-action-required.webp)
+
+Used sign-in logs to confirm how the pilot policy would evaluate before turning it on.
+
+### 5. CA policy enabled
+
+![CA policy enabled](05-ca-require-mfa-pilot-enabled.webp)
+
+Moved the validated pilot policy from Report-only to On after reviewing the expected impact.
+
+### 6. Conditional Access success
+
+![Conditional Access success](06-conditional-access-success.webp)
+
+Confirmed the enforced policy evaluated successfully during the pilot sign-in.
+
+### 7. MFA requirement satisfied
+
+![MFA authentication details](07-authentication-details-mfa-satisfied.webp)
+
+Authentication Details showed the MFA requirement was satisfied by a previously satisfied authentication claim.
+
+## Session-control extension
+
+### 8. Sign-in Frequency configured to 1 hour
 
 ![IAM-1054 Sign-in Frequency](02-sign-in-frequency-1-hour.webp)
 
-Shows the Conditional Access session control configured for a 1-hour Sign-in Frequency with periodic reauthentication.
+Added a 1-hour Sign-in Frequency with periodic reauthentication to test session-lifetime behavior separately from MFA satisfaction.
 
-### 2. Session expiration — Error 70044
+### 9. Session expiration — Error 70044
 
 ![IAM-1054 Error 70044](03-error-70044.webp)
 
-Shows the expected session-expiration behavior after the Sign-in Frequency control was enforced.
+Captured the expected session-expiration event caused by the Sign-in Frequency control.
 
-## Validation story
+## Key engineering lesson
 
-The baseline session remained usable until the configured Sign-in Frequency required reevaluation. The subsequent 70044 event provided evidence that session lifetime was being enforced independently from the user's existing MFA claim.
-
-Additional original screenshots are retained outside the public repository.
+**MFA satisfaction and session lifetime are separate controls.** A user can satisfy the MFA grant through an existing claim while Conditional Access still forces periodic session reevaluation through Sign-in Frequency.
