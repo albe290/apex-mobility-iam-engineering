@@ -1,0 +1,24 @@
+# Secrets / credentials
+*.pem
+*.pfx
+*.p12
+*.key
+*.cer
+*.crt
+*.token
+*.secret
+.env
+.env.*
+
+# PowerShell / local output
+*.log
+output/
+exports/
+
+# Office temp files
+~$*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
