@@ -1,19 +1,33 @@
 # IAM Automation
 
-This folder will contain the validated Microsoft Graph / PowerShell tooling used across the APEX project.
+This folder is reserved for the Microsoft Graph / PowerShell tooling that is actually validated as part of the APEX IAM project.
 
-## Working-set scripts to publish
+## Confirmed completed scripts
 
-- `users.ps1` — identity inspection
-- `groups.ps1` — group membership inspection
-- `enable-user.ps1` — account enablement + validation
-- `disable-user.ps1` — account disablement
-- `add-group-member.ps1` — approved group assignment
-- `remove-group-member.ps1` — approved group removal
-- `validate-app-access.ps1` — application access validation
-- `validate-signin.ps1` — sign-in validation
-- `remove-leaver-access.ps1` — leaver access cleanup
-- `update-mover-user.ps1` — mover workflow updates
+The project record confirms these scripts were built and used:
+
+- `users.ps1` — identity inspection with Microsoft Graph
+- `groups.ps1` — group-membership queries / validation
+- `enable-user.ps1` — test-user enablement workflow with access validation
+
+## Source-code publishing status
+
+The original literal `.ps1` source files are not currently present in the Project files or retrievable conversation artifacts available to this repository build.
+
+They are **not recreated here from memory**. The exact validated files should be published only when the original source is recovered, so the repository does not present reconstructed code as the code that was actually tested.
+
+## Planned automation expansion
+
+Future JML automation work can include:
+
+- Account disablement
+- Approved group assignment / removal
+- Application access validation
+- Sign-in validation
+- Leaver access cleanup
+- Mover attribute updates
+
+These are roadmap items until their actual source and validation evidence are available.
 
 ## Publishing rule
 
@@ -21,7 +35,7 @@ Only publish scripts that have been validated in the tenant and reviewed for sec
 
 ## Future IAM-1058 goal
 
-Refactor isolated scripts into a reusable JML Automation Toolkit with:
+Refactor the validated scripts into a reusable JML Automation Toolkit with:
 
 - Parameters
 - Dry-run mode

@@ -70,8 +70,10 @@ A successful login is only part of federation validation. IAM engineers should i
 
 ## Evidence
 
-See `evidence/` for the Toolkit configuration, claims, Graph RCA, final role assignment, and decoded assertion.
+[View the sanitized IAM-1055 evidence](evidence/README.md).
 
 ## SOP
 
-The reusable SAML integration SOP is maintained as part of the project documentation and will be published after a final public-sanitization review.
+[View the public SAML 2.0 Enterprise Application Integration SOP](../../docs/SAML-2.0-Enterprise-Application-Integration-SOP.md).
+
+The public SOP was sanitized before publication to remove tenant-specific identifiers while preserving the engineering workflow, troubleshooting logic, and validation steps.
