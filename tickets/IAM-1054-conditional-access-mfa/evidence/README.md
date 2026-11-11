@@ -6,43 +6,43 @@ This public evidence set documents the Conditional Access MFA pilot from initial
 
 ### 1. Break-glass Global Administrator validated
 
-![Break-glass Global Administrator validated](01-break-glass-global-admin-validated.webp)
+![Break-glass Global Administrator validated](01-break-glass-global-admin-validated.jpg)
 
 Validated the emergency-access account and Global Administrator role before changing tenant-wide authentication controls.
 
 ### 2. MFA pilot group scoped to Maya Brooks
 
-![CA MFA pilot group](02-ca-mfa-pilot-group-maya-brooks.webp)
+![CA MFA pilot group](02-ca-mfa-pilot-group-maya-brooks.jpg)
 
 Confirmed Maya Brooks as the pilot identity in `GRP-CA-MFA-Pilot`, limiting the initial Conditional Access blast radius.
 
 ### 3. CA policy staged in Report-only
 
-![CA policy report-only](03-ca-require-mfa-pilot-report-only.webp)
+![CA policy report-only](03-ca-require-mfa-pilot-report-only.jpg)
 
 Created `CA-Require-MFA-Pilot` with the MFA grant control and staged it in Report-only before enforcement.
 
 ### 4. Report-only evaluation captured
 
-![Report-only evaluation](04-report-only-user-action-required.webp)
+![Report-only evaluation](04-report-only-user-action-required.jpg)
 
 Used sign-in logs to confirm how the pilot policy would evaluate before turning it on.
 
 ### 5. CA policy enabled
 
-![CA policy enabled](05-ca-require-mfa-pilot-enabled.webp)
+![CA policy enabled](05-ca-require-mfa-pilot-enabled.jpg)
 
 Moved the validated pilot policy from Report-only to On after reviewing the expected impact.
 
 ### 6. Conditional Access success
 
-![Conditional Access success](06-conditional-access-success.webp)
+![Conditional Access success](06-conditional-access-success.jpg)
 
 Confirmed the enforced policy evaluated successfully during the pilot sign-in.
 
 ### 7. MFA requirement satisfied
 
-![MFA authentication details](07-authentication-details-mfa-satisfied.webp)
+![MFA authentication details](07-authentication-details-mfa-satisfied.jpg)
 
 Authentication Details showed the MFA requirement was satisfied by a previously satisfied authentication claim.
 
