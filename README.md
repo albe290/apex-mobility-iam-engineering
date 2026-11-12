@@ -12,7 +12,7 @@ The goal is not to collect isolated demos. Each ticket follows an engineering wo
 
 ## Portfolio highlights
 
-**Current status:** IAM-1054 and IAM-1055 completed and documented. Break/fix federation tickets and the reusable JML Automation Toolkit are next.
+**Current status:** IAM-1054 and IAM-1055 completed and documented. The recovered Microsoft Graph / PowerShell working set is now published as sanitized, hardened portfolio code. Break/fix federation tickets and the reusable JML Automation Toolkit are next.
 
 ## Current showcase tickets
 
@@ -28,9 +28,9 @@ Designed a RouteSphere federation scenario, used Microsoft Entra SAML Toolkit as
 
 ## Automation
 
-The automation section is reserved for the validated Microsoft Graph / PowerShell tooling used across the project. Actual scripts will be added from the working set rather than recreated from memory.
+The automation section now includes the recovered Microsoft Graph / PowerShell working set, organized across identity, access, lifecycle, and sign-in validation. Public copies are sanitized and hardened while preserving the original workflow intent.
 
-[View automation roadmap](automation/README.md)
+[View IAM automation](automation/README.md)
 
 ## What this repository demonstrates
 
