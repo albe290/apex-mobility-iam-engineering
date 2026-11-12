@@ -50,7 +50,7 @@ Authentication Details showed the MFA requirement was satisfied by a previously 
 
 ### 8. Sign-in Frequency configured to 1 hour
 
-![IAM-1054 Sign-in Frequency](02-sign-in-frequency-1-hour.webp)
+![IAM-1054 Sign-in Frequency](08-sign-in-frequency-1-hour.webp)
 
 Added a 1-hour Sign-in Frequency with periodic reauthentication to test session-lifetime behavior separately from MFA satisfaction.
 

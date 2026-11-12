@@ -36,4 +36,4 @@ Use the excluded emergency-access account to disable the Conditional Access poli
 
 ## Evidence
 
-Screenshots in `evidence/` show the missing session-control baseline, the 1-hour configuration, error 70044, and post-expiration success.
+Screenshots in `evidence/` document the emergency-access safeguard, pilot scoping, Report-only evaluation, policy enforcement, MFA satisfaction, the 1-hour Sign-in Frequency configuration, and error 70044 session-expiration behavior.

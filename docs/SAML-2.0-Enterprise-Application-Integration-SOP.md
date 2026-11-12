@@ -4,7 +4,7 @@
 
 **Microsoft Entra ID as Identity Provider \| APEX Mobility Group**
 
-Reference implementation: RouteSphere Fleet Operations design with Microsoft Entra SAML Toolkit used as the real Service Provider validation harness. \| v1.2 adds the IAM-1055 screenshot walkthrough.
+Reference implementation: RouteSphere Fleet Operations design with Microsoft Entra SAML Toolkit used as the real Service Provider validation harness. \| v1.2 adds the IAM-1055 visual walkthrough and public evidence references.
 
 | **SOP ID**         | IAM-SAML-001                                        |
 |--------------------|-----------------------------------------------------|
@@ -306,9 +306,11 @@ Use this walkthrough when onboarding a SAML 2.0 application to Microsoft Entra I
 
 - Search the decoded XML for NameID and every required claim. Confirm the values match the directory and the approved role assignment.
 
-// Browser console example for local Base64 decode  
-const saml = 'PASTE_SAMLRESPONSE_HERE';  
+```javascript
+// Browser console example for local Base64 decode
+const saml = 'PASTE_SAMLRESPONSE_HERE';
 console.log(atob(saml));
+```
 
 **Expected APEX evidence:** NameID/email = maya.brooks@apexmobility.com; department = Security; role = User.
 
@@ -376,7 +378,7 @@ Use this path only as an approved validation harness. It does not turn a fiction
 
 The sanitized public evidence used for this walkthrough is maintained in [`tickets/IAM-1055-saml-sso-integration/evidence/`](../tickets/IAM-1055-saml-sso-integration/evidence/).
 
-The screenshots below are the actual evidence captured during IAM-1055. Use them together with the numbered procedure in Section 6.8. They show the expected navigation, configuration, troubleshooting, and final validation states. Values shown are from the APEX learning environment and should not be copied into another tenant without validation.
+The original IAM-1055 working set captured eleven screenshots across configuration, troubleshooting, and final validation. To keep the public repository focused and sanitized, only a representative subset is published in the evidence folder. The figure notes below document the full walkthrough and explain what each original screenshot proved. Values in the original working set came from the APEX learning environment and should not be copied into another tenant without validation.
 
 **Evidence principle:** The screenshot proves the portal state; the sign-in log and decoded SAML assertion prove what actually occurred during authentication and what was transmitted to the Service Provider.
 
