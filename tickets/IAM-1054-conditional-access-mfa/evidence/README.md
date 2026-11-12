@@ -56,7 +56,7 @@ Added a 1-hour Sign-in Frequency with periodic reauthentication to test session-
 
 ### 9. Session expiration — Error 70044
 
-![IAM-1054 Error 70044](03-error-70044.webp)
+![IAM-1054 Error 70044](09-session-expiration-error-70044.jpg)
 
 Captured the expected session-expiration event caused by the Sign-in Frequency control.
 
